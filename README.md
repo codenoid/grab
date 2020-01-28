@@ -1,5 +1,3 @@
-<img align="right" width="100" height="100" src="https://raw.githubusercontent.com/codenoid/grab/master/grab.png">
-
 # grab [WIP]
 Collection of numerous GRAB's API in Go
 
@@ -22,7 +20,7 @@ import (
 )
 
 func main() {
-	resNearMe, err := food.GetRestaurant("-6.1328296", "106.8140347", "geprek bensu")
+	resNearMe, err := food.GetRestaurant("-6.1328296", "106.8140347", "geprek bensu", 32, 32)
 	if err != nil {
 		fmt.Println(err)
 	}
