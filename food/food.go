@@ -8,10 +8,10 @@ import (
 	"strings"
 )
 
-func GetRestaurant(lat, lon, keyword string) (FoodResult, error) {
+func GetRestaurant(lat, lon, keyword string, offset, pageSize int) (FoodResult, error) {
 	client := &http.Client{}
 
-	var query = fmt.Sprintf(`{"latlng":"%v,%v","keyword": "%v","offset":32,"pageSize":32}`, lat, lon, keyword)
+	var query = fmt.Sprintf(`{"latlng":"%v,%v","keyword": "%v","offset": %v,"pageSize": %v}`, lat, lon, keyword, offset, pageSize)
 	var payload = strings.NewReader(query)
 	req, err := http.NewRequest("POST", "https://portal.grab.com/foodweb/v2/search", payload)
 	if err != nil {
