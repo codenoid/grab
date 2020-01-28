@@ -3,6 +3,8 @@ Collection of numerous GRAB's API in Go
 
 ## Food Data
 
+[explore here](https://github.com/codenoid/grab/blob/master/food/structs.go) for more data
+
 ```
 package main
 
